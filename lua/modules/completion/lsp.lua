@@ -21,7 +21,7 @@ mason_lsp.setup({
 		"efm",
 		"sumneko_lua",
 		"clangd",
-		"gopls",
+		-- "gopls",
 		"pyright",
 	},
 })
@@ -250,6 +250,7 @@ local prettier = require("efmls-configs.formatters.prettier")
 local shfmt = require("efmls-configs.formatters.shfmt")
 
 -- Add your own config for formatter and linter here
+local isort = require("modules.completion.efm.formatters.isort")
 
 -- local rustfmt = require("modules.completion.efm.formatters.rustfmt")
 local clangfmt = require("modules.completion.efm.formatters.clangfmt")
@@ -271,7 +272,7 @@ efmls.setup({
 	lua = { formatter = stylua },
 	c = { formatter = clangfmt },
 	cpp = { formatter = clangfmt },
-	python = { formatter = black },
+	python = { formatter = { isort, black } },
 	vue = { formatter = prettier },
 	typescript = { formatter = prettier, linter = eslint },
 	javascript = { formatter = prettier, linter = eslint },

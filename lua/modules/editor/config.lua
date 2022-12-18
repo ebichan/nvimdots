@@ -12,8 +12,8 @@ function config.nvim_treesitter()
 			"c",
 			"cpp",
 			"lua",
-			"go",
-			"gomod",
+			-- "go",
+			-- "gomod",
 			"json",
 			"yaml",
 			"latex",
@@ -23,7 +23,7 @@ function config.nvim_treesitter()
 			"html",
 			"javascript",
 			"typescript",
-			"vue",
+			-- "vue",
 			"css",
 		},
 		highlight = {
@@ -529,6 +529,10 @@ function config.smartyank()
 			echo_hl = "Directory", -- highlight group of the OSC52 echo message
 		},
 	})
+end
+
+function config.surround()
+	require("nvim-surround").setup({})
 end
 
 return config

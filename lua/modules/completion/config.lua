@@ -329,6 +329,7 @@ function config.mason_install()
 			"stylua",
 
 			"black",
+			"isort",
 
 			"prettier",
 
