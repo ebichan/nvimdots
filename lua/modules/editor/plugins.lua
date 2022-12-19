@@ -62,11 +62,6 @@ editor["phaazon/hop.nvim"] = {
 	event = "BufReadPost",
 	config = conf.hop,
 }
-editor["karb94/neoscroll.nvim"] = {
-	opt = true,
-	event = "BufReadPost",
-	config = conf.neoscroll,
-}
 editor["akinsho/toggleterm.nvim"] = {
 	opt = true,
 	event = "UIEnter",

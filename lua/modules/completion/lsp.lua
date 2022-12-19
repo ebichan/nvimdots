@@ -251,7 +251,6 @@ local shfmt = require("efmls-configs.formatters.shfmt")
 
 -- Add your own config for formatter and linter here
 local isort = require("modules.completion.efm.formatters.isort")
-local yamlfmt = require("modules.completion.efm.formatters.yamlfmt")
 
 -- local rustfmt = require("modules.completion.efm.formatters.rustfmt")
 local clangfmt = require("modules.completion.efm.formatters.clangfmt")

@@ -441,12 +441,8 @@ function config.lualine()
 	end
 
 	local function get_cwd()
-		local cwd = vim.fn.getcwd()
-		local home = os.getenv("HOME")
-		if cwd:find(home, 1, true) == 1 then
-			cwd = "~" .. cwd:sub(#home + 1)
-		end
-		return icons.ui.RootFolderOpened .. cwd
+		local cwd = vim.fn.expand("%")
+		return cwd
 	end
 
 	local mini_sections = {
@@ -522,11 +518,6 @@ function config.lualine()
 				{
 					"fileformat",
 					icons_enabled = true,
-					symbols = {
-						unix = "LF",
-						dos = "CRLF",
-						mac = "CR",
-					},
 				},
 			},
 			lualine_z = { "progress", "location" },
@@ -844,11 +835,11 @@ function config.gitsigns()
 			-- Default keymap options
 			noremap = true,
 			buffer = true,
-			["n ]g"] = {
+			["n g]"] = {
 				expr = true,
 				"&diff ? ']g' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'",
 			},
-			["n [g"] = {
+			["n g["] = {
 				expr = true,
 				"&diff ? '[g' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'",
 			},

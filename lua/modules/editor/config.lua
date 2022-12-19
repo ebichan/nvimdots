@@ -112,7 +112,7 @@ function config.nvim_comment()
 end
 
 function config.hop()
-	require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+	require("hop").setup({})
 end
 
 function config.autotag()
@@ -130,31 +130,6 @@ end
 
 function config.nvim_colorizer()
 	require("colorizer").setup()
-end
-
-function config.neoscroll()
-	require("neoscroll").setup({
-		-- All these keys will be mapped to their corresponding default scrolling animation
-		mappings = {
-			"<C-u>",
-			"<C-d>",
-			"<C-b>",
-			"<C-f>",
-			"<C-y>",
-			"<C-e>",
-			"zt",
-			"zz",
-			"zb",
-		},
-		hide_cursor = true, -- Hide cursor while scrolling
-		stop_eof = true, -- Stop at <EOF> when scrolling downwards
-		use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
-		respect_scrolloff = false, -- Stop scrolling when the cursor reaches the scrolloff margin of the file
-		cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
-		easing_function = nil, -- Default easing function
-		pre_hook = nil, -- Function to run before the scrolling animation starts
-		post_hook = nil, -- Function to run after the scrolling animation ends
-	})
 end
 
 function config.auto_session()
@@ -181,22 +156,22 @@ function config.toggleterm()
 				return vim.o.columns * 0.40
 			end
 		end,
-		on_open = function()
-			-- Prevent infinite calls from freezing neovim.
-			-- Only set these options specific to this terminal buffer.
-			vim.api.nvim_set_option_value("foldmethod", "manual", { scope = "local" })
-			vim.api.nvim_set_option_value("foldexpr", "0", { scope = "local" })
-		end,
-		open_mapping = false, -- [[<c-\>]],
-		hide_numbers = true, -- hide the number column in toggleterm buffers
-		shade_filetypes = {},
-		shade_terminals = false,
-		shading_factor = "1", -- the degree by which to darken to terminal colour, default: 1 for dark backgrounds, 3 for light
-		start_in_insert = true,
-		insert_mappings = true, -- whether or not the open mapping applies in insert mode
-		persist_size = true,
-		direction = "horizontal",
-		close_on_exit = true, -- close the terminal window when the process exits
+		-- on_open = function()
+		-- 	-- Prevent infinite calls from freezing neovim.
+		-- 	-- Only set these options specific to this terminal buffer.
+		-- 	vim.api.nvim_set_option_value("foldmethod", "manual", { scope = "local" })
+		-- 	vim.api.nvim_set_option_value("foldexpr", "0", { scope = "local" })
+		-- end,
+		open_mapping = [[<c-\>]], -- [[<c-\>]],
+		-- hide_numbers = true, -- hide the number column in toggleterm buffers
+		-- shade_filetypes = {},
+		-- shade_terminals = false,
+		-- shading_factor = "1", -- the degree by which to darken to terminal colour, default: 1 for dark backgrounds, 3 for light
+		-- start_in_insert = true,
+		-- insert_mappings = true, -- whether or not the open mapping applies in insert mode
+		-- persist_size = true,
+		-- direction = "horizontal",
+		-- close_on_exit = true, -- close the terminal window when the process exits
 		shell = vim.o.shell, -- change the default shell
 	})
 end
