@@ -9,6 +9,11 @@ ui["catppuccin/nvim"] = {
 	as = "catppuccin",
 	config = conf.catppuccin,
 }
+ui["folke/tokyonight.nvim"] = {
+	opt = false,
+	as = "tokyonight",
+	config = conf.tokyonigh,
+}
 ui["zbirenbaum/neodim"] = {
 	opt = true,
 	event = "LspAttach",
