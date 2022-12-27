@@ -252,7 +252,7 @@ local shfmt = require("efmls-configs.formatters.shfmt")
 -- Add your own config for formatter and linter here
 local isort = require("modules.completion.efm.formatters.isort")
 
--- local rustfmt = require("modules.completion.efm.formatters.rustfmt")
+local rustfmt = require("modules.completion.efm.formatters.rustfmt")
 local clangfmt = require("modules.completion.efm.formatters.clangfmt")
 
 -- Override default config here
@@ -285,7 +285,7 @@ efmls.setup({
 	sh = { formatter = shfmt, linter = shellcheck },
 	zsh = { formatter = shfmt, linter = shellcheck },
 	markdown = { formatter = prettier },
-	-- rust = {formatter = rustfmt},
+	rust = { formatter = rustfmt },
 })
 
 formatting.configure_format_on_save()
