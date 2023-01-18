@@ -103,7 +103,7 @@ function config.lspsaga()
 		},
 		symbol_in_winbar = {
 			in_custom = true,
-			enable = false,
+			enable = true,
 			separator = " " .. icons.ui.Separator,
 			hide_keyword = true,
 			show_file = false,

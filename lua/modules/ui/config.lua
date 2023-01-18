@@ -480,28 +480,6 @@ function config.lualine()
 		return ok and m.waiting and icons.misc.EscapeST or ""
 	end
 
-	local function lspsaga_symbols()
-		local exclude = {
-			["terminal"] = true,
-			["toggleterm"] = true,
-			["prompt"] = true,
-			["NvimTree"] = true,
-			["help"] = true,
-		}
-		if vim.api.nvim_win_get_config(0).zindex or exclude[vim.bo.filetype] then
-			return "" -- Excluded filetypes
-		else
-			local ok, lspsaga = pcall(require, "lspsaga.symbolwinbar")
-			if ok then
-				if lspsaga:get_winbar() ~= nil then
-					return lspsaga:get_winbar()
-				else
-					return "" -- Cannot get node
-				end
-			end
-		end
-	end
-
 	local function diff_source()
 		local gitsigns = vim.b.gitsigns_status_dict
 		if gitsigns then
