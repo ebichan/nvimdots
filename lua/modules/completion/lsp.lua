@@ -204,6 +204,18 @@ for _, server in ipairs(mason_lsp.get_installed_servers()) do
 				},
 			},
 		})
+	elseif server == "pyright" then
+		nvim_lsp[server].setup({
+			capabilities = capabilities,
+			on_attach = custom_attach,
+			settings = {
+				python = {
+					analysis = {
+						diagnosticMode = "openFilesOnly",
+					},
+				},
+			},
+		})
 	elseif server ~= "efm" then
 		nvim_lsp[server].setup({
 			capabilities = capabilities,
