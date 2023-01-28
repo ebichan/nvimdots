@@ -23,11 +23,11 @@ editor["nvim-treesitter/nvim-treesitter"] = {
 	dependencies = {
 		{ "nvim-treesitter/nvim-treesitter-textobjects" },
 		{ "p00f/nvim-ts-rainbow" },
-		{ "JoosepAlviste/nvim-ts-context-commentstring" },
+		{ "joosepalviste/nvim-ts-context-commentstring" },
 		{ "mfussenegger/nvim-ts-hint-textobject" },
 		{ "andymass/vim-matchup" },
 		{ "windwp/nvim-ts-autotag", config = conf.autotag },
-		{ "NvChad/nvim-colorizer.lua", config = conf.nvim_colorizer },
+		{ "nvchad/nvim-colorizer.lua", config = conf.nvim_colorizer },
 		{ "abecodes/tabout.nvim", config = conf.tabout },
 	},
 }

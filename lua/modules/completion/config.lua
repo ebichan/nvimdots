@@ -120,8 +120,8 @@ function config.lspsaga()
 			incoming = icons.ui.Incoming,
 			outgoing = icons.ui.Outgoing,
 			colors = {
-				normal_bg = colors.base,
-				title_bg = colors.base,
+				normal_bg = colors.mantle,
+				title_bg = colors.mantle,
 				red = colors.red,
 				megenta = colors.maroon,
 				orange = colors.peach,
