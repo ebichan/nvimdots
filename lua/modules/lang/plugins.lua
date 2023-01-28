@@ -19,9 +19,12 @@ local conf = require("modules.lang.config")
 -- 	config = conf.lang_org,
 -- }
 lang["iamcco/markdown-preview.nvim"] = {
-	opt = true,
+	lazy = true,
 	ft = "markdown",
-	run = "cd app && yarn install",
+	build = "cd app && yarn install",
 }
-lang["chrisbra/csv.vim"] = { opt = true, ft = "csv" }
+lang["chrisbra/csv.vim"] = {
+	lazy = true,
+	ft = "csv",
+}
 return lang
