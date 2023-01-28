@@ -10,7 +10,7 @@ ui["sainnhe/edge"] = {
 	config = conf.edge,
 }
 ui["catppuccin/nvim"] = {
-	lazy = false,
+	lazy = true,
 	name = "catppuccin",
 	config = conf.catppuccin,
 }
@@ -20,9 +20,9 @@ ui["rcarriga/nvim-notify"] = {
 	config = conf.notify,
 }
 ui["folke/tokyonight.nvim"] = {
-	opt = false,
+	lazy = false,
 	as = "tokyonight",
-	config = conf.tokyonigh,
+	config = conf.tokyonight,
 }
 ui["zbirenbaum/neodim"] = {
 	lazy = true,
