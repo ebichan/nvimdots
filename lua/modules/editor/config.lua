@@ -500,6 +500,7 @@ end
 
 function config.surround()
 	require("nvim-surround").setup({})
+end
 
 function config.tabout()
 	require("tabout").setup({
