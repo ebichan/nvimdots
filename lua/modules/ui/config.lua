@@ -579,7 +579,7 @@ function config.lualine()
 		sections = {
 			lualine_a = { { "mode" } },
 			lualine_b = { { "branch" }, { "diff", source = diff_source } },
-			lualine_c = { lspsaga_symbols },
+			lualine_c = {},
 			lualine_x = {
 				{ escape_status },
 				{
@@ -625,11 +625,11 @@ function config.lualine()
 	})
 
 	-- Properly set background color for lspsaga
-	local winbar_bg = require("modules.utils").hl_to_rgb("StatusLine", true, colors.mantle)
-	for _, hlGroup in pairs(require("lspsaga.lspkind").get_kind()) do
-		require("modules.utils").extend_hl("LspSagaWinbar" .. hlGroup[1], { bg = winbar_bg })
-	end
-	require("modules.utils").extend_hl("LspSagaWinbarSep", { bg = winbar_bg })
+	-- local winbar_bg = require("modules.utils").hl_to_rgb("StatusLine", true, colors.mantle)
+	-- for _, hlGroup in pairs(require("lspsaga.lspkind").get_kind()) do
+	-- 	require("modules.utils").extend_hl("LspSagaWinbar" .. hlGroup[1], { bg = winbar_bg })
+	-- end
+	-- require("modules.utils").extend_hl("LspSagaWinbarSep", { bg = winbar_bg })
 end
 
 function config.nvim_tree()
