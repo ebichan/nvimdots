@@ -4,9 +4,13 @@ local home = require("core.global").home
 settings["use_ssh"] = false
 settings["format_on_save"] = true
 
+-- Set the format disabled directories here, files under these dirs won't be formatted on save.
 settings["format_disabled_dirs"] = {
 	home .. "/format_disabled_dir_under_home",
 }
+
+-- Set it to false if you don't use nvim to open big files.
+settings["load_big_files_faster"] = true
 
 ---Change the colors of the global palette here.
 ---Settings will complete their replacement at initialization.
