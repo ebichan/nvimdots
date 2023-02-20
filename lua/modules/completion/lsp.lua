@@ -35,7 +35,6 @@ mason_lsp.setup({
 	ensure_installed = {
 		"bashls",
 		"efm",
-		"sumneko_lua",
 		"clangd",
 		-- "gopls",
 		"pyright",
